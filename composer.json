@@ -1,0 +1,34 @@
+{
+	"name": "skeeks/yii2-schedule-input-widget",
+	"description": "Work schedule widget",
+	"keywords": ["yii", "yii2", "framework", "skeeks", "skeeks-cms", "skeekscms", "sx", "widget", "schedule"],
+    "homepage": "https://skeeks.com/",
+	"type": "yii2-extension",
+	"license": "BSD-3-Clause",
+	"support": {
+        "issues": "https://github.com/skeeks-semenov/yii2-schedule-input-widget/issues",
+        "source": "https://github.com/skeeks-semenov/yii2-schedule-input-widget",
+		"wiki": "https://cms.skeeks.com/",
+		"authors": "https://skeeks.com"
+    },
+	"authors": [
+        {
+            "name": "SkeekS",
+            "email": "support@skeeks.com",
+            "homepage": "https://skeeks.com"
+        },
+        {
+            "name": "Semenov Alexander",
+            "email": "semenov@skeeks.com"
+        }
+    ],
+	"require": {
+		"yiisoft/yii2": "^2",
+		"skeeks/yii2-sx": "^1.4.1"
+	},
+    "autoload": {
+        "psr-4": {
+            "skeeks\\yii2\\scheduleInputWidget\\": "src/"
+        }
+    }
+}
