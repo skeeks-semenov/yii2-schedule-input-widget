@@ -1,6 +1,7 @@
 Work schedule widget for yii2
 =====================
 
+A small element for the form of the yii2 framework. Allows you to select working days and time for working on them. Ability to select multiple ranges for one day.
 
 [![Latest Stable Version](https://poser.pugx.org/skeeks/yii2-schedule-input-widget/v/stable.png)](https://packagist.org/packages/skeeks/yii2-schedule-input-widget)
 [![Total Downloads](https://poser.pugx.org/skeeks/yii2-schedule-input-widget/downloads.png)](https://packagist.org/packages/skeeks/yii2-schedule-input-widget)
