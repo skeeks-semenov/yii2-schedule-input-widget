@@ -1,4 +1,4 @@
-Work schedule widget.
+Work schedule widget for yii2
 =====================
 
 
@@ -47,6 +47,11 @@ $form->field($model, 'schedule')->widget(
 
 ```
 
+
+Screenshot
+------------
+
+[![Work schedule widget for yii2](https://cms.skeeks.com/uploads/all/fc/56/8c/fc568ca078ab03db47b4e87e432d5ce3.png)](https://cms.skeeks.com/uploads/all/fc/56/8c/fc568ca078ab03db47b4e87e432d5ce3.png)
 
 Links
 ----------
