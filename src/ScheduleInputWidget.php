@@ -49,11 +49,19 @@ class ScheduleInputWidget extends InputWidget
         if ($this->hasModel()) {
             $this->clientOptions['inputName'] = Html::getInputName($this->model, $this->attribute);
             $this->clientOptions['value'] = $this->model->{$this->attribute};
+
+            $hiddenInput = \yii\helpers\Html::hiddenInput(
+                \yii\helpers\Html::getInputName($widget->model, $widget->attribute)
+            );
         } else {
-            throw new InvalidConfigException;
+            $this->clientOptions['inputName'] = $this->name;
+            $this->clientOptions['value'] = $this->value;
+
+            $hiddenInput = \yii\helpers\Html::hiddenInput($this->name, $this->value);
         }
         return $this->render('schedule-input', [
             'element' => $element,
+            'hiddenInput' => $hiddenInput,
         ]);
     }
 }

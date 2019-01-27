@@ -23,23 +23,27 @@ or add
 ```
 
 
-How to use
+How to use without model
 ----------
 
 ```php
-//App config
-[
-    'bootstrap'    => ['assetsAutoCompress'],
-    'components'    =>
-    [
-    //....
-        'assetsAutoCompress' =>
-        [
-            'class'         => '\skeeks\yii2\assetsAuto\AssetsAutoCompressComponent',
-        ],
-    //....
-    ]
-]
+
+\skeeks\yii2\scheduleInputWidget\ScheduleInputWidget::widget([
+    'name' => 'schedule'
+]);
+
+```
+
+How to use with model
+----------
+
+```php
+
+$form = new \yii\widgets\ActiveForm();
+
+$form->field($model, 'schedule')->widget(
+    \skeeks\yii2\scheduleInputWidget\ScheduleInputWidget::class
+);
 
 ```
 

@@ -6,32 +6,39 @@
  * @date 02.03.2016
  */
 /* @var $this yii\web\View */
-/* @var $widget \common\widgets\WorkTimeInputWidget */
+/* @var $widget \skeeks\yii2\scheduleInputWidget\ScheduleInputWidget */
 $widget = $this->context;
 $this->registerCss(<<<CSS
-.sx-widget-work-time label
+.sx-schedule-input-widget label
 {
     display: initial;
     margin-right: 10px;
+}
+.sx-schedule-input-widget select
+{
+    display: inline;
+    max-width: 47px;
+    padding-right: 3px;
+    padding-left: 3px;
 }
 CSS
 );
 
 $options = $widget->options;
-\yii\helpers\Html::addCssClass($options, 'sx-widget-work-time')
+\yii\helpers\Html::addCssClass($options, 'sx-schedule-input-widget')
 ?>
 
 <?= \yii\helpers\Html::beginTag('div', $options); ?>
         <div>
-            <? echo \yii\helpers\Html::hiddenInput(
-                \yii\helpers\Html::getInputName($widget->model, $widget->attribute)
-            ); ?>
+            <?= $hiddenInput; ?>
             <?= $element; ?>
         </div>
 
         <div class="sx-elements-wrapper">
         </div>
-        <a class="btn btn-default btn-sm sx-btn-add-row"><i class="glyphicon glyphicon-plus"></i> <?= \Yii::t('skeeks/cms', 'Add')?></a>
+        <button class="btn btn-default btn-sm sx-btn-add-row">
+            <i class="fa fa-plus"></i> <?= \Yii::t('skeeks/cms', 'Add'); ?>
+        </button>
 
 <?
 \yii\jui\Sortable::widget();
@@ -194,19 +201,23 @@ $this->registerJs(<<<JS
             var startHour = $("<select>", {
                 //'class': 'form-control',
                 'name': self.get('inputName') + '[' + this.counter + '][startHour]',
+                'class' : 'form-control'
             });
             var endHour = $("<select>", {
                 //'class': 'form-control',
                 'name': self.get('inputName') + '[' + this.counter + '][endHour]',
+                'class' : 'form-control'
             });
 
             var startMinutes = $("<select>", {
                 //'class': 'form-control',
                 'name': self.get('inputName') + '[' + this.counter + '][startMinutes]',
+                'class' : 'form-control'
             });
             var endMinutes = $("<select>", {
                 //'class': 'form-control',
                 'name': self.get('inputName') + '[' + this.counter + '][endMinutes]',
+                'class' : 'form-control'
             });
 
             _.each(Hours, function(label, value)
@@ -255,20 +266,19 @@ $this->registerJs(<<<JS
             var jRemoveBtn = $("<a>", {
                 'href': '#',
                 'class': 'btn btn-sm btn-default',
-            }).append('<i class="glyphicon glyphicon-remove"></i>');
+            }).append('<i class="fa fa-remove"></i>');
             var jRow = $("<div>", {'class': 'row'});
             jRow
-                .append($("<div>", {"class": "col-md-5", "style": "margin-top: 10px;"}).append(jDays))
-                .append($("<div>", {"class": "col-md-5"}).append(startHour).append(":").append(startMinutes).append(" — ").append(endHour).append(":").append(endMinutes))
-                .append($("<div>", {"class": "col-md-1"}).append(""))
+                .append($("<div>", {"class": "col-md-5 col-lg-4", "style": "margin-top: 10px;"}).append(jDays))
+                .append($("<div>", {"class": "col-md-5 col-lg-4"}).append(startHour).append(":").append(startMinutes).append(" — ").append(endHour).append(":").append(endMinutes))
                 //.append($("<div>", {"class": "col-md-3"}).append(endHour).append(":").append(endMinutes))
-                .append($("<div>", {"class": "col-md-1"}).append(jRemoveBtn));
+                .append($("<div>", {"class": "col-md-1 col-lg-1"}).append(jRemoveBtn));
             jRemoveBtn.on('click', function()
             {
                 jRow.remove();
                 return false;
             });
-            /*jInputKey.on('change', function()
+            /*jInputKey.on('change', function()planschedule
             {
                 jOption.val($(this).val());
                 self.jElement.change();
