@@ -52,7 +52,7 @@ class ScheduleInputWidget extends InputWidget
         } else {
             throw new InvalidConfigException;
         }
-        return $this->render('work-schedule-input', [
+        return $this->render('schedule-input', [
             'element' => $element,
         ]);
     }
