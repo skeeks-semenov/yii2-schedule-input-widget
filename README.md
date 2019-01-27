@@ -54,6 +54,16 @@ Screenshot
 
 [![Work schedule widget for yii2](https://cms.skeeks.com/uploads/all/fc/56/8c/fc568ca078ab03db47b4e87e432d5ce3.png)](https://cms.skeeks.com/uploads/all/fc/56/8c/fc568ca078ab03db47b4e87e432d5ce3.png)
 
+[![Work schedule widget for yii2](https://cms.skeeks.com/uploads/all/06/59/13/065913f9bf27e59f1ad3b7ad092faf44.png)](https://cms.skeeks.com/uploads/all/06/59/13/065913f9bf27e59f1ad3b7ad092faf44.png)
+
+
+Video
+------------
+
+[![Work schedule widget for yii2](https://img.youtube.com/vi/mSZi8ukgngA/maxresdefault.jpg)](https://www.youtube.com/watch?v=mSZi8ukgngA)
+
+
+
 Links
 ----------
 * [Github](https://github.com/skeeks-semenov/yii2-schedule-input-widget)
