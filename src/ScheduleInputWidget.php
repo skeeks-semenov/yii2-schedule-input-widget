@@ -51,7 +51,7 @@ class ScheduleInputWidget extends InputWidget
             $this->clientOptions['value'] = $this->model->{$this->attribute};
 
             $hiddenInput = \yii\helpers\Html::hiddenInput(
-                \yii\helpers\Html::getInputName($widget->model, $widget->attribute)
+                \yii\helpers\Html::getInputName($this->model, $this->attribute)
             );
         } else {
             $this->clientOptions['inputName'] = $this->name;
