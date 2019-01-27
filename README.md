@@ -60,7 +60,7 @@ Screenshot
 Video
 ------------
 
-[![Work schedule widget for yii2](https://img.youtube.com/vi/mSZi8ukgngA/maxresdefault.jpg)](https://www.youtube.com/watch?v=mSZi8ukgngA)
+[![Work schedule widget for yii2](https://www.fresher.ru/manager_content/12-2018/youtube-podvel-tradicionnye-itogi-goda/1.jpg)](https://www.youtube.com/watch?v=mSZi8ukgngA)
 
 
 
