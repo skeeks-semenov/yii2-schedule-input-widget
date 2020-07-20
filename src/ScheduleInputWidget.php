@@ -9,6 +9,7 @@
 namespace skeeks\yii2\scheduleInputWidget;
 
 use yii\base\InvalidConfigException;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\InputWidget;
 
@@ -63,5 +64,40 @@ class ScheduleInputWidget extends InputWidget
             'element' => $element,
             'hiddenInput' => $hiddenInput,
         ]);
+    }
+
+    /**
+     * @param array $work_time
+     * @return array
+     */
+    static public function getWorkingData($work_time = [])
+    {
+        $daysLib = [
+            1 => "Пн",
+            2 => "Вт",
+            3 => "Ср",
+            4 => "Чт",
+            5 => "Пт",
+            6 => "Сб",
+            7 => "Вс",
+        ];
+        $result = [];
+        if ($work_time) {
+            $result = $work_time;
+
+            foreach ($work_time as $key => $row) {
+                $daysString = [];
+                $days = ArrayHelper::getValue($row, 'day');
+                if ($days) {
+                    foreach ($days as $dayKey => $day) {
+                        $daysString[$day] = $daysLib[$day];
+                    }
+                }
+
+                $result[$key]['daysStrings'] = $daysString;
+            }
+        }
+
+        return $result;
     }
 }
