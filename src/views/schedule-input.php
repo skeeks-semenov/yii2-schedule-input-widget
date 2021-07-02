@@ -266,13 +266,13 @@ $this->registerJs(<<<JS
             var jRemoveBtn = $("<a>", {
                 'href': '#',
                 'class': 'btn btn-sm btn-default',
-            }).append('<i class="fa fa-remove"></i>');
+            }).append('<i class="fa fa-times"></i>');
             var jRow = $("<div>", {'class': 'row'});
             jRow
-                .append($("<div>", {"class": "col-md-5 col-lg-4", "style": "margin-top: 10px;"}).append(jDays))
-                .append($("<div>", {"class": "col-md-5 col-lg-4"}).append(startHour).append(":").append(startMinutes).append(" — ").append(endHour).append(":").append(endMinutes))
+                .append($("<div>", {"class": "col-md-5 col-lg-4 my-auto", "style": ""}).append(jDays))
+                .append($("<div>", {"class": "col-md-5 col-lg-4 my-auto"}).append(startHour).append(":").append(startMinutes).append(" — ").append(endHour).append(":").append(endMinutes))
                 //.append($("<div>", {"class": "col-md-3"}).append(endHour).append(":").append(endMinutes))
-                .append($("<div>", {"class": "col-md-1 col-lg-1"}).append(jRemoveBtn));
+                .append($("<div>", {"class": "col-md-1 col-lg-1 my-auto"}).append(jRemoveBtn));
             jRemoveBtn.on('click', function()
             {
                 jRow.remove();
